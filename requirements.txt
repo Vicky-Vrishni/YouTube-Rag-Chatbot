@@ -1,0 +1,12 @@
+youtube-transcript-api
+langchain
+langchain-huggingface
+sentence-transformers
+langchain-chroma
+chromadb
+python-dotenv
+ragas
+datasets
+streamlit
+langchain-groq
+
