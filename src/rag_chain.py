@@ -1,5 +1,15 @@
 import os
 from dotenv import load_dotenv
+
+def get_api_key(key_name: str) -> str:
+    try:
+        return st.secrets[key_name]
+    except Exception:
+        return os.getenv(key_name)
+
+
+    
+import streamlit as st
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 from langchain_core.prompts import ChatPromptTemplate
 from vectorstore import load_vectorstore
@@ -27,7 +37,7 @@ def get_llm():
         repo_id="meta-llama/Llama-3.3-70B-Instruct",
         task="text-generation",
         temperature=0,
-        huggingfacehub_api_token=os.getenv("HF_TOKEN")
+       huggingfacehub_api_token=get_api_key("HF_TOKEN")
     )
     llm = ChatHuggingFace(llm=endpoint)
     return llm

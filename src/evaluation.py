@@ -1,7 +1,8 @@
 import os
 from dotenv import load_dotenv
+import streamlit as st
 from langchain_groq import ChatGroq
-from rag_chain import answer_query
+from rag_chain import answer_query, get_api_key
 
 load_dotenv()
 
@@ -45,7 +46,7 @@ def get_eval_llm():
     llm = ChatGroq(
         model="openai/gpt-oss-120b",
         temperature=0.0,
-        api_key=os.getenv("GROQ_API_KEY"),
+        api_key=get_api_key("GROQ_API_KEY")
     )
     return llm
 
