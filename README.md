@@ -56,11 +56,35 @@ pip install -r requirements.txt
 
 Create a `.env` file in the root directory with the following:
 
-Run the app:
-
 ```bash
 streamlit run app.py
 ```
+
+
+## Frequently Asked Questions (FAQ)
+
+### 1. What is a YouTube RAG Chatbot?
+
+It is a Retrieval-Augmented Generation application that allows users to ask questions about the content of a YouTube video using its transcript.
+
+### 2. Does the chatbot use the entire YouTube video?
+
+The chatbot works with the available video transcript rather than directly processing the video itself.
+
+### 3. How does the chatbot reduce hallucinations?
+
+It retrieves relevant transcript chunks to ground the generated answer and uses a separate evaluator model to assess faithfulness and relevancy.
+
+### 4. Which vector database does the project use?
+
+The project uses ChromaDB to store and retrieve transcript embeddings.
+
+### 5. Can I run the project locally?
+
+Yes. Install the dependencies, configure the required API keys and run the Streamlit application as described in the setup instructions.
+
+
+
 
 ## Author
 
