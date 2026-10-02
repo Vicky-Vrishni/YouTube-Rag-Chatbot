@@ -83,7 +83,27 @@ The project uses ChromaDB to store and retrieve transcript embeddings.
 
 Yes. Install the dependencies, configure the required API keys and run the Streamlit application as described in the setup instructions.
 
+# Python cache
+__pycache__/
+*.py[cod]
 
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
 
 
 ## Author
