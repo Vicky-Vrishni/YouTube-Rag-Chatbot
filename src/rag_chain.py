@@ -16,7 +16,7 @@ from vectorstore import load_vectorstore
 
 load_dotenv()
 
-PROMPT_TEMPLATE = """You are a helpful assistant that answers questions based only on the provided video transcript context.
+PROMPT_TEMPLATE = """You are a helpful AI assistant that answers ONLY provided questions based only on the provided video transcript context.
 
 Context from the video:
 {context}
@@ -24,12 +24,12 @@ Context from the video:
 Question: {question}
 
 Instructions:
-- Answer only using the information present in the context above.
-- If the answer is not present in the context, say "I don't have enough information from this video to answer that."
-- Do not make up information that is not in the context.
-- Keep the answer clear and concise.
+- Answer ONLY using the information present in the context above.
+- If the answer is NOT present in the context, say "I don't have enough information from this video to answer that."
+- Do NOT MAKE UP information that is not in the context.
+- Keep the ANSWER CLEAR and CONCISE.
 
-Answer:"""
+Answer: """
 
 
 def get_llm():
