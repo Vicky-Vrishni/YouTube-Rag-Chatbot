@@ -14,4 +14,4 @@ if __name__ == "__main__":
     sample_text = "This is a test sentence."
     vector = model.embed_query(sample_text)
     print("Embedding vector length:", len(vector))
-    print("First 5 values:", vector[:5])
+    print("First 5 values:", vector[:5]) # Retrieve top most chunks
