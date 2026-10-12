@@ -7,7 +7,7 @@ from rag_chain import answer_query, get_api_key
 load_dotenv()
 
 
-FAITHFULNESS_PROMPT = """You are an evaluator checking if an answer is faithful to the given context.
+FAITHFULNESS_PROMPT = """You are an ANSWER EVALUATOR checking if an answer is faithful to the given context.
 
 Context:
 {context}
@@ -15,7 +15,7 @@ Context:
 Answer:
 {answer}
 
-Task: Check if the answer is fully supported by the context. Give a score between 0 and 1, where:
+Task: Check if the ANSWER is fully supported by the context. Give a score between 0 and 1, where:
 - 1 means the answer is completely based on the context, no made-up information.
 - 0 means the answer contains information not present in the context at all.
 
