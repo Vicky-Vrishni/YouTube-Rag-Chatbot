@@ -1,0 +1,39 @@
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+def get_user_friendly_error(error: Exception) -> str:
+    """Convert technical API errors into safe user-facing messages."""
+
+    error_name = type(error).__name__.lower()
+    error_message = str(error).lower()
+
+    if "ratelimit" in error_name or "rate limit" in error_message:
+        return "The AI service rate limit has been reached. Please wait and try again."
+
+    if (
+        "authentication" in error_name
+        or "permission" in error_name
+        or "unauthorized" in error_message
+        or "invalid api key" in error_message
+        or "401" in error_message
+        or "403" in error_message
+    ):
+        return "API authentication failed. Please check your API key configuration."
+
+    if "timeout" in error_name or "timed out" in error_message:
+        return "The AI service took too long to respond. Please try again."
+
+    if (
+        "connection" in error_name
+        or "connection error" in error_message
+        or "network" in error_message
+    ):
+        return "Unable to connect to the AI service. Please check your connection."
+
+    if "503" in error_message or "service unavailable" in error_message:
+        return "The AI service is temporarily unavailable. Please try again later."
+
+    return "Something went wrong while processing your request. Please try again later."
