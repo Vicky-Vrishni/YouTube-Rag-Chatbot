@@ -23,7 +23,7 @@ This project takes a YouTube video, extracts its transcript, and builds a search
 
 | Component | Technology |
 |---|---|
-| Transcript Extraction | youtube-transcript-api |
+| Transcript Extraction | youtube-transcript-api | 
 | Chunking | LangChain (RecursiveCharacterTextSplitter) |
 | Embeddings | Hugging Face (sentence-transformers/all-MiniLM-L6-v2) |
 | Vector Database | ChromaDB |
