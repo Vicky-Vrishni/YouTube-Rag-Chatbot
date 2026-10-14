@@ -35,6 +35,26 @@ This project takes a YouTube video, extracts its transcript, and builds a search
 ## Architecture
 
 
+flowchart TD
+    A["User"] --> B["Streamlit UI"]
+    B --> C["YouTube Video URL"]
+    C --> D["Transcript Extractor"]
+    D --> E["Transcript Text"]
+    E --> F["Text Chunking"]
+    F --> G["Embeddings"]
+    G --> H[("Vector Store")]
+    I["User Question"] --> J["Question Embedding"]
+    J --> K["Similarity Search"]
+    H --> K
+    K --> L["Relevant Transcript Chunks"]
+    L --> M["LLM"]
+    M --> N["Answer to User"]
+
+    D -. "Extraction failure" .-> O["Error Handling"]
+    O --> B
+
+
+
 
 
 
