@@ -54,7 +54,24 @@ flowchart TD
     O --> B
 
 
+The YouTube RAG Chatbot follows a Retrieval-Augmented Generation (RAG) workflow to answer questions using the content of YouTube videos.
 
+### Workflow
+
+1. **User Input:** The user provides a YouTube video URL through the application interface.
+2. **Transcript Extraction:** The transcript extractor retrieves the video's available transcript.
+3. **Error Handling:** Invalid video inputs and transcript extraction failures are handled with clear, controlled error messages.
+4. **Text Processing:** The transcript is processed and split into smaller chunks suitable for retrieval.
+5. **Embedding Generation:** Text chunks are converted into vector representations.
+6. **Vector Storage and Retrieval:** The system searches for transcript chunks relevant to the user's question.
+7. **Answer Generation:** The retrieved context is passed to the language model to generate a context-based response.
+8. **Response Display:** The generated answer is returned to the user through the application interface.
+
+### High-Level Data Flow
+
+**YouTube URL → Transcript Extraction → Text Chunking → Embeddings → Vector Retrieval → LLM → Answer**
+
+The retrieval step helps the language model focus on relevant video content instead of relying solely on its pretrained knowledge.
 
 
 
