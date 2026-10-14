@@ -36,6 +36,16 @@ This project takes a YouTube video, extracts its transcript, and builds a search
 
 
 
+
+
+### Robust Transcript Error Handling
+
+- Validates YouTube video URLs and video IDs before attempting transcript extraction.
+- Handles unavailable transcripts, disabled captions, and inaccessible videos with clear error messages.
+- Uses custom exceptions to distinguish invalid video inputs from transcript extraction failures.
+- Avoids exposing raw internal exception details in user-facing error messages.
+- Preserves the original exception as the cause to support debugging.
+
 ## How It Works
 
 1. The user pastes a YouTube video URL in the sidebar and clicks "Process Video."
