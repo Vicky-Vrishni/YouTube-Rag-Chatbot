@@ -7,6 +7,6 @@ chromadb
 python-dotenv
 ragas
 datasets
-streamlit
+streamlit 
 langchain-groq
 
