@@ -9,3 +9,4 @@ ragas
 datasets
 streamlit 
 langchain-groq
+pytest
