@@ -4,7 +4,7 @@ import streamlit as st
 from langchain_groq import ChatGroq
 from rag_chain import answer_query, get_api_key
 
-load_dotenv()
+load_dotenv() 
 
 
 FAITHFULNESS_PROMPT = """You are an ANSWER EVALUATOR checking if an answer is faithful to the given context.
