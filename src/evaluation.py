@@ -6,7 +6,7 @@ from rag_chain import answer_query, get_api_key
 
 load_dotenv() 
 
-
+#LLM evals meathod
 FAITHFULNESS_PROMPT = """You are an ANSWER EVALUATOR checking if an answer is faithful to the given context.
 
 Context:
