@@ -2,7 +2,7 @@
 
 An end-to-end Retrieval-Augmented Generation (RAG) application that lets users chat with any YouTube video. Paste a video link, and ask questions about its content — answers are generated using only the video's transcript, with built-in hallucination detection.
 
-**Live App:** https://youtube-rag-chatbot-2sbbddgnwduy7hu7scq3le.streamlit.app/
+**Live App:** (live)https://youtube-rag-chatbot-2sbbddgnwduy7hu7scq3le.streamlit.app/
 
 ## Overview
 
