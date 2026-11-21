@@ -14,7 +14,7 @@ from evaluation import evaluate_faithfulness, evaluate_relevancy, get_eval_llm
 st.set_page_config(page_title="YouTube RAG Chatbot", layout="wide")
 
 st.title("YouTube Video Chatbot")
-st.caption("Ask questions about any YouTube video using RAG")
+st.caption("Ask questions about any YouTube video using RAG chatbot")
 
 
 if "video_id" not in st.session_state:
